@@ -4,7 +4,7 @@ import { todosReducer, initialState, TODOS_ACTIONS } from './todosReducer';
  
 
 export const useTodos = () => {
-    const[todos, dispatch] = useReducer( todosReducer,initialState());
+    const[todos, dispatch] = useReducer( todosReducer, initialState());
 
     useEffect(() => {
         const todosStringify =JSON.stringify(todos);
@@ -24,7 +24,7 @@ export const useTodos = () => {
         _id,
         type: TODOS_ACTIONS.REMOVE
     });
-    const onEdite = newTodo => dispatch({
+    const onEdit = newTodo => dispatch({
         newTodo,
         type: TODOS_ACTIONS.EDITE
     });
@@ -33,6 +33,6 @@ export const useTodos = () => {
         onRemove,
         onSwitch,
         addTodos,
-        onEdite
+        onEdit
     };
 };

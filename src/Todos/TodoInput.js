@@ -5,8 +5,6 @@ export const TodoInput = ({onAdd, initialValue}) => {
     const[value, setInputValue] = useState(initialValue  ); 
 
   const onChange = event => setInputValue(event.target.value);
- 
-
   const onSubmit = event => {
     event.preventDefault();   
     if (value==='') return; 

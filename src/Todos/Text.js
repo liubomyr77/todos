@@ -18,5 +18,5 @@ Text.propTypes= {
 Text.defaultProps = {
     size: '14px',
     onClick: () => null,
-    
 };
+

@@ -15,7 +15,7 @@ export const Todos = () => {
         return (
             <div className="todos">
                 <TodoInput onAdd={addTodos} />
-                <TodoList  {...{todos, onSwitch, onRemove,onEdit}} />
+                <TodoList  {...{todos, onSwitch, onRemove, onEdit}} />
             </div>
     ) 
 };
