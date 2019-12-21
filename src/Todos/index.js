@@ -1,14 +1,21 @@
 import React from 'react';
-import {Text} from './Text';
-import { Icon } from './Icon';
 import { TodoInput } from './TodoInput';
+import { TodoList}  from './TodoList';
+import {useTodos} from './useTodos';
 
-export const Todos = () => { 
-    return (
-        <div className="todos">
-               <Text size='50px'>Todos</Text>
-               <Icon name="remove" /> 
-               <TodoInput onAdd={e =>console.log(e)} />
-        </div>
+
+export const Todos = () => {   
+   const {
+    todos,
+    addTodos,
+    onSwitch,
+    onEdit,
+    onRemove
+    } = useTodos();
+        return (
+            <div className="todos">
+                <TodoInput onAdd={addTodos} />
+                <TodoList  {...{todos, onSwitch, onRemove,onEdit}} />
+            </div>
     ) 
 };
